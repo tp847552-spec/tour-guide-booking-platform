@@ -1,0 +1,13 @@
+{
+  "name": "tour-guide-booking-platform",
+  "version": "1.0.0",
+  "description": "Student project: Tour Guide Booking Platform using Node.js and Express",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}

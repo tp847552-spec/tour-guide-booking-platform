@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tour Guide Booking Platform</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#"><span class="brand-icon">✦</span> Guide<span>Go</span></a>
+    <nav><a href="#guides">Explore Guides</a><a href="#how">How it works</a><a href="#booking" class="nav-cta">Book a guide</a></nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">LOCAL GUIDES · REAL EXPERIENCES</p>
+        <h1>Discover a place<br />through <em>local eyes.</em></h1>
+        <p class="hero-text">Find friendly local guides, explore hidden gems, and plan your next memorable journey.</p>
+        <a href="#guides" class="primary-btn">Explore guides <span>→</span></a>
+        <div class="hero-stats"><div><strong>Local</strong><small>knowledge</small></div><div><strong>Easy</strong><small>booking</small></div><div><strong>Flexible</strong><small>experiences</small></div></div>
+      </div>
+      <div class="hero-photo">
+        <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1400" alt="Mountain travel destination" />
+        <div class="photo-tag"><span class="tag-dot"></span><div><strong>Your next adventure</strong><small>Starts with a local guide</small></div></div>
+      </div>
+    </section>
+
+    <section class="section" id="guides">
+      <div class="section-heading"><div><p class="eyebrow">HANDPICKED EXPERIENCES</p><h2>Meet your local guides</h2></div><p>Choose a guide that matches your travel style.</p></div>
+      <div class="search-row"><span>⌕</span><input id="searchInput" type="search" placeholder="Search by city, guide, language..." /><button id="searchButton">Search</button></div>
+      <div id="guideGrid" class="guide-grid"><p class="loading">Loading guides…</p></div>
+    </section>
+
+    <section class="how-section" id="how">
+      <p class="eyebrow">SIMPLE BY DESIGN</p><h2>Your trip in three steps</h2>
+      <div class="steps">
+        <article><span>01</span><h3>Find a guide</h3><p>Search by destination and explore guide profiles.</p></article>
+        <article><span>02</span><h3>Choose your date</h3><p>Share your details and preferred travel date.</p></article>
+        <article><span>03</span><h3>Send a booking</h3><p>Receive a booking reference and pending status.</p></article>
+      </div>
+    </section>
+
+    <section class="booking-section" id="booking">
+      <div><p class="eyebrow">LET'S PLAN YOUR TRIP</p><h2>Book your guide</h2><p class="booking-intro">Complete the form to send a booking request. This student demo does not process real payments.</p>
+        <div class="booking-note"><strong>✦ Friendly reminder</strong><p>Your request is stored in this demo while the server is running.</p></div>
+      </div>
+      <form id="bookingForm" class="booking-form">
+        <label>Full name<input name="customerName" required placeholder="Enter your name" /></label>
+        <label>Email address<input name="email" type="email" required placeholder="you@example.com" /></label>
+        <label>Choose a guide<select name="guideId" id="guideSelect" required><option value="">Select a guide</option></select></label>
+        <div class="form-row"><label>Travel date<input name="date" type="date" id="dateInput" required /></label><label>Guests<input name="guests" type="number" min="1" max="20" value="1" required /></label></div>
+        <button class="primary-btn submit-btn" type="submit">Send booking request <span>→</span></button>
+        <p id="formMessage" class="form-message" role="status"></p>
+      </form>
+    </section>
+  </main>
+  <footer><a class="brand" href="#"><span class="brand-icon">✦</span> Guide<span>Go</span></a><p>Student project · Tour Guide Booking Platform</p><p>Explore thoughtfully. Travel locally.</p></footer>
+  <script src="app.js"></script>
+</body>
+</html>

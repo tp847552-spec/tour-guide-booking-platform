@@ -42,7 +42,9 @@ const guides = [
 // Demo storage: data resets when the server restarts.
 // A production project should use MongoDB or another persistent database.
 const bookings = [];
-
+app.get("/"(req,res)=>{
+  res.sendFile(__dirname +"/index.html");
+});
 app.get("/api/guides", (req, res) => {
   const search = (req.query.search || "").toLowerCase().trim();
   const results = guides.filter((guide) =>
